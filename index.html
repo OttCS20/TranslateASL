@@ -1,0 +1,80 @@
+﻿<!DOCTPE html><html>
+
+<head>
+
+<style>
+.translatebox1 {
+width: 100%;
+height: 49%;
+overflow: hidden;
+border: 2px solid #60A0DD;
+background: #F8F8F8
+padding: 20px;
+border-bottom: none;
+}
+.translatebox2 {
+width: 100%;
+height: 49%;
+overflow: hidden;
+border: 2px solid #60A0DD;
+background: #F8F8F8
+padding: 20px;
+}
+input {
+width: 100%;
+height: 80%;
+overflow: auto;
+border: none;
+background: #FFFFFF;
+padding: 20px;
+text-align: center;
+color: #000000;
+font-family: arial;
+font-size: 101%;
+}
+button {
+float: center;
+border: none;
+height: 6%;
+width: 10%;
+margin-left: 45%;
+margin-top: 20PX;
+text-align: center;
+color: #000000;
+font-family: arial;
+}
+</style>
+
+</head>
+
+<body>
+<div class="translatebox1">
+<form id="frm1" action="/action_page.php">
+<input type="text" name="english" value="Enter English Text"><br>
+<hr style="border:1px solid #C4C4C4;width:80%;">
+</form> 
+<button onclick="myFunction()">Try it</button>
+</div>
+
+<div class="translatebox2">
+<p id="demo"></p>
+</div>
+</body>
+
+<script>
+function selectedInput(x) {
+x.style.background = "#FFFFFF";
+}
+function myFunction() {
+    var x = document.getElementById("frm1");
+    var text = "";
+    var i;
+    for (i = 0; i < x.length ;i++) {
+        text += x.elements[i].value + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+</html>
+
+
