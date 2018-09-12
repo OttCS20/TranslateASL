@@ -1,4 +1,4 @@
-﻿<!DOCTPE html><html>
+<!DOCTPE html><html>
 
 <head>
 
@@ -53,11 +53,11 @@ font-family: arial;
 <input type="text" name="english" value="Enter English Text"><br>
 <hr style="border:1px solid #C4C4C4;width:80%;">
 </form> 
-<button onclick="myFunction()">Try it</button>
+<button onclick="translateASL()">Try it</button>
 </div>
 
 <div class="translatebox2">
-<p id="demo"></p>
+<p id="ASL"></p>
 </div>
 </body>
 
@@ -65,16 +65,23 @@ font-family: arial;
 function selectedInput(x) {
 x.style.background = "#FFFFFF";
 }
-function myFunction() {
+function translateASL() {
     var x = document.getElementById("frm1");
     var text = "";
     var i;
     for (i = 0; i < x.length ;i++) {
         text += x.elements[i].value + "<br>";
     }
-    document.getElementById("demo").innerHTML = text;
+    var lowerCase = text.toLowerCase();
+    var arrayTerms = lowerCase.split(" ");
+    document.getElementById("ASL").innerHTML = arrayTerms;
 }
 </script>
 </html>
+
+
+
+
+
 
 
