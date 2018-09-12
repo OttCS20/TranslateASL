@@ -1,2 +1,2 @@
 # TranslateASL
-Working towards a fast, free way to learn sign language
+Working towards a fast, free way to translate and learn conversational sign language.
