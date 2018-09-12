@@ -16,8 +16,8 @@ border-bottom: none;
 }
 
 .translatebox2 {
-width: 95vw;
-height: 44.5vh;
+width: 94.5vw;
+height: 44vh;
 overflow: hidden;
 border-top: .5vh solid #60A0DD;
 background: #FFFFFF;
@@ -25,16 +25,14 @@ padding-left: 2.5vw;
 padding-right: 2.5vw;
 padding-top: 2.5vh;
 padding-bottom: 2.5vh;
-font-family: arial;
 }
 
 input {
 width: 99.5vw;
 height: 35vh;
 overflow: auto;
-border: none;
+border: 0px solid black;
 background: #FFFFFF;
-padding: 20px;
 text-align: center;
 color: #000000;
 font-family: arial;
@@ -50,6 +48,14 @@ margin-top: 2vh;
 text-align: center;
 color: #000000;
 font-family: arial;
+font-size: 2vw;
+border-radius: .25vw;
+background: #EEE;
+}
+
+hr {
+border: .25vh solid #EEE;
+width: 80vw;
 }
 </style>
 
@@ -59,9 +65,9 @@ font-family: arial;
 <div class="translatebox1">
 <form id="frm1" action="/action_page.php">
 <input type="text" name="english" value="Enter English Text"><br>
-<hr style="border:1px solid #C4C4C4;width:80%;">
+<hr>
 </form> 
-<button onclick="translateASL()">Try it</button>
+<button onclick="translateASL()">Translate</button>
 </div>
 
 <div class="translatebox2">
@@ -86,5 +92,11 @@ function translateASL() {
 }
 </script>
 </html>
+
+
+
+
+
+
 
 
