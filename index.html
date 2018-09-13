@@ -88,7 +88,10 @@ function translateASL() {
     }
     var lowerCase = text.toLowerCase();
     var arrayTerms = lowerCase.split(" ");
-    document.getElementById("ASL").innerHTML = arrayTerms;
+    for (i = 0; i < arrayTerms.length ;i++) {
+    	imgSource = arrayTerms[i].toString();
+    	document.getElementById("ASL").innerHTML = arrayTerms[i].toString();
+    }
 }
 </script>
 </html>
