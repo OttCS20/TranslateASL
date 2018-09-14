@@ -77,31 +77,18 @@ width: 80vw;
 </body>
 
 <script>
-function selectedInput(x) {
-x.style.background = "#FFFFFF";
-}
 function displayTranslatedImages() {
     var inputText = document.getElementById("textToTranslate").value;
     var displayContainer = document.getElementById("ASL");
-    var filteredText = filter(inputText); //should be an array of all the words
-    for( let i = 0; i < filteredText.length; i++ ) {
-    let imageObject = document.createElement("img");
-        let imageSource = filteredText[i];
+    var lowerCase = inputText.toLowerCase();
+    var arrayTerms = lowerCase.split(" ");
+    for( let i = 0; i < arrayTerms.length; i++ ) {
+        let imageObject = document.createElement("img");
+        let imageSource = arrayTerms[i];
         imageObject.src = imageSource + ".jpg";
         displayContainer.appendChild(imageObject);
-}
-    
-}
-function filter() {
-    var x = document.getElementById("frm1");
-    var text = "";
-    var i;
-    for (i = 0; i < x.length ;i++) {
-        text += x.elements[i].value + "<br>";
     }
-    var lowerCase = text.toLowerCase();
-    var arrayTerms = lowerCase.split(" ");
-    return arrayTerms;
+    
 }
 </script>
 </html>
