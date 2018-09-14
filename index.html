@@ -87,12 +87,12 @@ function displayTranslatedImages() {
     for( let i = 0; i < filteredText.length; i++ ) {
     let imageObject = document.createElement("img");
         let imageSource = filteredText[i];
-        imageObject.src = imageSource;
+        imageObject.src = imageSource + ".jpg";
         displayContainer.appendChild(imageObject);
 }
     
 }
-function translateASL() {
+function filter() {
     var x = document.getElementById("frm1");
     var text = "";
     var i;
@@ -101,10 +101,7 @@ function translateASL() {
     }
     var lowerCase = text.toLowerCase();
     var arrayTerms = lowerCase.split(" ");
-    for (i = 0; i < arrayTerms.length ;i++) {
-    	imgSource = arrayTerms[i].toString();
-    	document.getElementById("ASL").innerHTML = arrayTerms[i].toString();
-    }
+    return arrayTerms;
 }
 </script>
 </html>
