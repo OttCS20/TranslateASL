@@ -95,7 +95,7 @@ function displayTranslatedImages() {
         let imageObject = document.createElement("img");
         let imageSource = arrayTerms[i];
         imageObject.src = imageSource + ".gif";
-        imageObject.alt = "Looks like we don't have that... Would you like to contribute?";
+        imageObject.alt = imageSource + ".gif";
         displayContainer.appendChild(imageObject);
     }
     
