@@ -74,7 +74,7 @@ img {
 <input type="text" name="english" value="Enter English Text" id="textToTranslate" /> 
 <hr>
 </form> 
-<button onclick="displayTranslatedImages()">Translate</button>
+<button onclick="displayTranslatedImages()" id="translate">Translate</button>
     
 </div>
 
@@ -84,6 +84,15 @@ img {
 </body>
 
 <script>
+    
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Trigger the button element with a click
+    document.getElementById("translate").click();
+  }
+}
+    
 function displayTranslatedImages() {
     var inputText = document.getElementById("textToTranslate").value;
     var displayContainer = document.getElementById("ASL");
