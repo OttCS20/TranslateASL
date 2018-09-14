@@ -42,17 +42,17 @@ button {
     float: center;
     border: none;
     max-height: 6vh;
-    max-width: 10vw;
+    padding-top: 1.75vh;
+    padding-bottom: 1.75vh;
+    width: 10vw;
     margin-left: 45vw;
-    margin-top: 2vh;
+    margin-top: 2.5vh;
     text-align: center;
     color: #000000;
     font-family: arial;
     font-size: 2vh;
     border-radius: .25vw;
     background: #EEE;
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 hr {
@@ -101,6 +101,20 @@ function displayTranslatedImages() {
     }
     
 }
+    
+document.getElementById("textToTranslate")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("translate").click();
+    }
+});
+
+function buttonCode()
+{
+  alert("Button code executed.");
+}
+    
 </script>
 </html>
 
