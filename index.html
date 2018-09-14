@@ -64,20 +64,33 @@ width: 80vw;
 <body>
 <div class="translatebox1">
 <form id="frm1" action="/action_page.php">
-<input type="text" name="english" value="Enter English Text"><br>
+<input type="text" name="english" value="Enter English Text" id="textToTranslate" /> 
 <hr>
 </form> 
-<button onclick="translateASL()">Translate</button>
+<button onclick="displayTranslatedImages()">Translate</button>
+    
 </div>
 
 <div class="translatebox2">
-<p id="ASL"></p>
+<div id="ASL" />
 </div>
 </body>
 
 <script>
 function selectedInput(x) {
 x.style.background = "#FFFFFF";
+}
+function displayTranslatedImages() {
+    var inputText = document.getElementById("textToTranslate").value;
+    var displayContainer = document.getElementById("ASL");
+    var filteredText = filter(inputText); //should be an array of all the words
+    for( let i = 0; i < filteredText.length; i++ ) {
+    let imageObject = document.createElement("img");
+        let imageSource = filteredText[i];
+        imageObject.src = imageSource;
+        displayContainer.appendChild(imageObject);
+}
+    
 }
 function translateASL() {
     var x = document.getElementById("frm1");
