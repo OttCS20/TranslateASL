@@ -86,7 +86,9 @@ function displayTranslatedImages() {
         let imageObject = document.createElement("img");
         let imageSource = arrayTerms[i];
         imageObject.src = imageSource + ".jpg";
+        imageObject.alt = imageSource + ".jpg";
         displayContainer.appendChild(imageObject);
+        document.getElementById('myImage').src='pic_bulboff.gif'
     }
     
 }
