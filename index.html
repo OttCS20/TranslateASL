@@ -86,6 +86,7 @@ img {
 </body>
 
 <script>
+
 function displayTranslatedImages() {
     var inputText = document.getElementById("textToTranslate").value;
     var displayContainer = document.getElementById("ASL");
@@ -95,24 +96,11 @@ function displayTranslatedImages() {
     for( let i = 0; i < arrayTerms.length; i++ ) {
         let imageObject = document.createElement("img");
         let imageSource = arrayTerms[i];
-        imageObject.src = imageSource + ".jpg";
-        imageObject.alt = imageSource + ".jpg";
+        imageObject.src = imageSource + ".png";
+        imageObject.alt = imageSource + ".png";
         displayContainer.appendChild(imageObject);
     }
     
-}
-    
-document.getElementById("textToTranslate")
-    .addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("translate").click();
-    }
-});
-
-function buttonCode()
-{
-  alert("Button code executed.");
 }
     
 </script>
