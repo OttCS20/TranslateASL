@@ -80,7 +80,8 @@ width: 80vw;
 function displayTranslatedImages() {
     var inputText = document.getElementById("textToTranslate").value;
     var displayContainer = document.getElementById("ASL");
-    var lowerCase = inputText.toLowerCase();
+    var specialRemoved = inputText.replace(/[^\w ]/gi, '');
+    var lowerCase = specialRemoved.toLowerCase();
     var arrayTerms = lowerCase.split(" ");
     for( let i = 0; i < arrayTerms.length; i++ ) {
         let imageObject = document.createElement("img");
@@ -88,7 +89,7 @@ function displayTranslatedImages() {
         imageObject.src = imageSource + ".jpg";
         imageObject.alt = imageSource + ".jpg";
         displayContainer.appendChild(imageObject);
-        document.getElementByTagName("img").src='pic_bulboff.gif';
+        document.getElementByTagName("img").src=imageObject.alt;
     }
     
 }
