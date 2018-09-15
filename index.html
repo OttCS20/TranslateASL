@@ -9,16 +9,16 @@ body {
     font-family: arial;
 }
 .translatebox1 {
-    width: 99.5vw;
-    height: 49vh;
+    width: 100%;
+    height: 49%;
     overflow: hidden;
     background: #FFFFFF;
     border-bottom: none;
 }
 
 .translatebox2 {
-    width: 100vw;
-    height: 44vh;
+    width: 100%;
+    height: 44%;
     overflow: hidden;
     border-top: .5vh solid #60A0DD;
     background: #FFFFFF;
@@ -27,8 +27,8 @@ body {
 }
 
 input {
-    width: 99.5vw;
-    height: 35vh;
+    width: 99.5%;
+    height: 67%;
     overflow: auto;
     border: 0px solid black;
     background: #FFFFFF;
@@ -40,18 +40,20 @@ input {
 button {
     float: center;
     border: none;
-    max-height: 6vh;
-    padding-top: 1.75vh;
-    padding-bottom: 1.75vh;
-    width: 10vw;
-    margin-left: 45vw;
-    margin-top: 2.5vh;
+    height: 10%;
+    padding-top: auto;
+    padding-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3.5%;
+    margin-bottom: auto;
     text-align: center;
     color: #000000;
     font-family: arial;
     font-size: 2vh;
     border-radius: .25vw;
     background: #EEE;
+    display: block;
 }
 
 hr {
@@ -60,14 +62,17 @@ hr {
 }
     
 img {
-    width: 10vw;
-    height: 10vw;
-    margin: 2.5vw;
+    width: 10vh;
+    height: 10vh;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    margin-bottom: 1vh;
+    display: inline;
 }
 
 dropButton {
 	border: .5vh solid #60A0DD;
-	width: 37vw;
+	width: auto;
     min-width: 200px;
     padding: 10px;
     z-index: 9999;
@@ -106,7 +111,7 @@ function setContent() {
 	var tag1 = document.getElementsByTagName("dropButton");
 	
 	for(var i = 0; i < tag1.length; i++ ) {
-		var title = document.createElement("h2");
+		var title = document.createElement("h3");
 		var textNo = document.createTextNode(" " + tag1[i].title);
 		title.appendChild(textNo);
 		tag1[i].appendChild(title);
@@ -139,4 +144,5 @@ function displayTranslatedImages() {
     
 </script>
 </html>
+
 
