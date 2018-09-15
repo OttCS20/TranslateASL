@@ -86,6 +86,10 @@ img {
 <script>
 
 function displayTranslatedImages() {
+    var myNode = document.getElementById("ASL");
+    while (myNode.lastChild) {
+        myNode.removeChild(myNode.lastChild);
+    }
     var inputText = document.getElementById("textToTranslate").value;
     var displayContainer = document.getElementById("ASL");
     var specialRemoved = inputText.replace(/[^\w ]/gi, '');
@@ -103,11 +107,3 @@ function displayTranslatedImages() {
     
 </script>
 </html>
-
-
-
-
-
-
-
-
