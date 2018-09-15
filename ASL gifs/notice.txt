@@ -1,9 +1,0 @@
-Files placed in this folder have been verified to adhere to the following criteria:
-
-1) Translation is accurate
-2) File does not contain any innappropriate material
-3) Translation is clear and understandable
-4) File does not infringe any copyright or trademark laws.
-5) The file must be in a .gif (animated image format)
-
-If the translation follows all of the above criteria, it my be uploaded into this folder, with the filename being the (lowercase) accurate english translation, followed by ".gif".
