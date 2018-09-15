@@ -98,8 +98,8 @@ function displayTranslatedImages() {
     for( let i = 0; i < arrayTerms.length; i++ ) {
         let imageObject = document.createElement("img");
         let imageSource = arrayTerms[i];
-        imageObject.src = "ASL gifs/" + imageSource + ".gif";
-        imageObject.alt = "ASL gifs/" + imageSource + ".gif";
+        imageObject.src = imageSource + ".gif";
+        imageObject.alt = imageSource + ".gif";
         displayContainer.appendChild(imageObject);
     }
     
