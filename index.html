@@ -100,25 +100,6 @@ li a, .dropbtn {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 5vh;
-	-webkit-animation-name: pulse;  /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */    
-    -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
-    animation-name: pulse;
-    animation-duration: 3s;    
-    animation-fill-mode: forwards;
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes pulse {
-    0% {color:#000000;}
-    50% {color:#60A0DD;}
-	  100% {color:#000000;}
-}
-
-@keyframes pulse {
-    0% {color:#000000;}
-    50% {color:#60A0DD;}
-	  100% {color:#000000;}
 }
 
 li a:hover, .dropdown:hover .dropbtn {
@@ -156,7 +137,29 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-    
+	
+.animate {
+		-webkit-animation-name: pulse;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */    
+    -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+    animation-name: pulse;
+    animation-duration: 3s;    
+    animation-fill-mode: forwards;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes pulse {
+    0% {}
+    50% {color:#60A0DD;}
+	  100% {}
+}
+
+@keyframes pulse {
+    0% {}
+    50% {color:#60A0DD;}
+	  100% {}
+}
+	
 </style>
 
 </head>
@@ -166,7 +169,7 @@ li.dropdown {
 
 <ul>
   <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">&#8801;</a>
+    <a href="javascript:void(0)" class="dropbtn animate">&#8801;</a>
     <div class="dropdown-content">
       <a href="contribute.html">Looking to help?</a>
       <a href="reportissue.html">Found a bug?</a>
