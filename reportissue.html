@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang=en>
+
+<head>
+
+<style>
+
+body {
+  font-family: trebuchet ms;
+  padding: 0px;
+  margin: 0px;
+  margin-top: -2.5%;
+  padding-bottom: 5%;
+}
+
+tableTop {
+  width: 100%;
+  background-color: #60A0DD;
+  margin-top: -1.5%;
+  height: 9%;
+  display: block;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 5;
+}
+
+tableTop h2 {
+  float: left;
+  color: #FFF;
+  font-size: 3vh;
+  margin-left: 10%;
+  display: inline;
+  position: fixed;
+  top: -.5%;
+}
+
+tableTop h3 {
+  float: right;
+  color: #000;
+  font-size: 3vh;
+  margin-right: 1vw;
+  display: inline;
+  top: -1%;
+  position: fixed;
+  right: 2.5%;
+}
+
+h4 {
+font-size: 2.5vh;
+width: 95%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.center {
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+}
+
+.left {
+text-align: left;
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.right {
+text-align: right;
+margin-left: auto;
+margin-right: auto;
+}
+
+.further {
+position: absolute;
+width: 100%;
+bottom: -5vh;
+color: #FFFFFA;
+font-size: 7.5vh;
+margin-left: auto;
+margin-right: auto;
+text-shadow: 0px 0px 7.5px black;
+}
+
+.welcome {
+color: #FFFFFA;
+font-size: 7.5vw;
+position: absolute;
+  top: 45%;
+  left: 50%;
+  -moz-transform: translateX(-25%) translateY(-25%);
+  -webkit-transform: translateX(-25%) translateY(-25%);
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0px 0px 120px 40px;
+  z-index: 0;
+}
+
+div.backsplash {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://images.pexels.com/photos/255527/pexels-photo-255527.jpeg?cs=srgb&dl=asking-blur-close-up-255527.jpg&fm=jpg");
+  min-height: 101vh;
+  overflow-y: hidden;
+  z-index: -5;
+}
+
+a {
+text-decoration: none;
+color: black;
+border-bottom: .25vh solid #60A0DD;
+}
+
+</style>
+
+</head>
+
+<body onload="setContent()">
+
+<tableTop title="TranslateASL" id="Report Issue"></tableTop>
+
+<br>
+
+<div class="backsplash">
+
+<h1 class="center welcome">Welcome to Translate ASL</h2>
+
+<p class="center further">&#8891</p>
+
+</div>
+
+<h4 class="center">Get the flyswatter!</h4>
+
+<p class="left">Thanks for being on the lookout for bugs! Just send us an email at <a href="mailto:OttC.TranslateASL@gmail.com?subject=User%20Bug%20Report&body=I have noticed a specific issue with (please be specific, it helps us find and correct them quicker)"> OttC.TranslateASL@gmail.com</a>. You can also report it to the coding team on <a href="https://github.com/OttCS20/TranslateASL">Github</a>.
+<h4 class="center">Notice a wrong sign result?</h4>
+
+<p class="left">Mistakes happen occasionally, so if you notice a wrong sign translation, just<a href="mailto:OttC.TranslateASL@gmail.com?subject=(Incorrect%20Word)&body=I noticed that this word's translation was wrong: (avocado?) Here's what it should be: (avocado.mp4)"> send us a quick email</a> with the incorrect word in the <strong>Subject</strong> field, with a video attachment of your translation! We'll check it out and fix it as soon as possible!
+
+</div>
+
+</body>
+
+<script>
+function setContent() {
+	var tag1 = document.getElementsByTagName("tableTop");
+	
+	for(var i = 0; i < tag1.length; i++ ) {
+		var title = document.createElement("h2");
+		var textNo = document.createTextNode(" " + tag1[i].title);
+		title.appendChild(textNo);
+		tag1[i].appendChild(title);
+		var content = document.createElement("h3");
+		var textNo2 = document.createTextNode(" " + tag1[i].id);
+		content.appendChild(textNo2);
+		tag1[i].appendChild(content);
+	}
+}
+</script>
+</script>
+
+</html>
