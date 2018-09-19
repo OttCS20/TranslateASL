@@ -1,8 +1,6 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTPE html><html>
 
 <head>
-
-<meta charset="UTF-8">
 
 	<title>TranslateASL</title>
 	
@@ -128,29 +126,6 @@ li.dropdown {
 }
 	
 </style>
-	
-<script>
-function displayTranslatedImages() {
-    var myNode = document.getElementById("ASL");
-    while (myNode.lastChild) {
-        myNode.removeChild(myNode.lastChild);
-    }
-    var inputText = document.getElementById("textToTranslate").value;
-    var displayContainer = document.getElementById("ASL");
-    var specialRemoved = inputText.replace(/[^\w ]/gi, '');
-    var lowerCase = specialRemoved.toLowerCase();
-    var arrayTerms = lowerCase.split(" ");
-    for( let i = 0; i < arrayTerms.length; i++ ) {
-        let imageObject = document.createElement("img");
-        let imageSource = arrayTerms[i];
-        imageObject.src = imageSource + ".gif";
-        imageObject.alt = imageSource + ".gif";
-        displayContainer.appendChild(imageObject);
-    }
-    
-}
-    
-</script>
 
 </head>
 
@@ -178,8 +153,30 @@ function displayTranslatedImages() {
 </div>
 
 <div class="translatebox2">
-<div id="ASL"></div>
+<div id="ASL" />
 </div>
-	
 </body>
+
+<script>
+function displayTranslatedImages() {
+    var myNode = document.getElementById("ASL");
+    while (myNode.lastChild) {
+        myNode.removeChild(myNode.lastChild);
+    }
+    var inputText = document.getElementById("textToTranslate").value;
+    var displayContainer = document.getElementById("ASL");
+    var specialRemoved = inputText.replace(/[^\w ]/gi, '');
+    var lowerCase = specialRemoved.toLowerCase();
+    var arrayTerms = lowerCase.split(" ");
+    for( let i = 0; i < arrayTerms.length; i++ ) {
+        let imageObject = document.createElement("img");
+        let imageSource = arrayTerms[i];
+        imageObject.src = imageSource + ".gif";
+        imageObject.alt = imageSource + ".gif";
+        displayContainer.appendChild(imageObject);
+    }
+    
+}
+    
+</script>
 </html>
