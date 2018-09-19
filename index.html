@@ -22,7 +22,7 @@ body {
   width: 100%;
   height: 44%;
   overflow: hidden;
-  border-top: .5vh solid #60A0DD;
+  border-top: .5vh solid #60A0DD;;
   background: #FFFFFF;
   padding-top: 2.5vh;
   padding-bottom: 2.5vh;
@@ -43,21 +43,19 @@ input {
   margin-right: auto;
 }
 button {
-  float: center;
   border: none;
   height: 10%;
   padding-top: auto;
   padding-bottom: auto;
   margin-left: auto;
+  margin-top: 4.5vh;
   margin-right: auto;
-  margin-top: 3.5%;
-  margin-bottom: 3.5%;
   text-align: center;
   color: #000000;
   font-family: trebuchet ms;
   font-size: 2vh;
   border-radius: .25vw;
-  background: #EEE;
+  background: #EAEAEA;
   display: block;
 }
 
@@ -95,11 +93,12 @@ li {
 
 li a, .dropbtn {
   display: inline-block;
-  color: #CCC;
+  color: #AAA;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 5vh;
+  font-size: 6.5vh;
+  color: #60A0DD;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
@@ -138,28 +137,6 @@ li.dropdown {
   display: block;
 }
 	
-.animate {
-    -webkit-animation-name: pulse;  /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */    
-    -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
-    animation-name: pulse;
-    animation-duration: 3s;    
-    animation-fill-mode: forwards;
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes pulse {
-    0% {}
-    50% {color:#60A0DD;}
-	  100% {}
-}
-
-@keyframes pulse {
-    0% {}
-    50% {color:#60A0DD;}
-    100% {}
-}
-	
 </style>
 
 </head>
@@ -169,7 +146,7 @@ li.dropdown {
 
 <ul>
   <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn animate">&#8801;</a>
+    <a href="javascript:void(0)" class="dropbtn">&#8801;</a>
     <div class="dropdown-content">
       <a href="contribute.html">Looking to help?</a>
       <a href="reportissue.html">Found a bug?</a>
@@ -216,3 +193,4 @@ function displayTranslatedImages() {
     
 </script>
 </html>
+
