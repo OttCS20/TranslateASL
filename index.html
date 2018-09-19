@@ -1,6 +1,8 @@
-<!DOCTPE html><html>
+<!DOCTYPE html><html lang="en">
 
 <head>
+
+<meta charset="UTF-8">
 
 	<title>TranslateASL</title>
 	
@@ -17,7 +19,6 @@ body {
   background: #FFFFFF;
   border-bottom: none;
 }
-
 .translatebox2 {
   width: 100%;
   height: 44%;
@@ -27,7 +28,6 @@ body {
   padding-top: 2.5vh;
   padding-bottom: 2.5vh;
 }
-
 input {
   width: 80%;
   height: 67%;
@@ -58,7 +58,6 @@ button {
   background: #EAEAEA;
   display: block;
 }
-
 hr {
   border: .25vh solid #EEE;
   width: 80%;
@@ -72,7 +71,6 @@ img {
   margin-bottom: 1vh;
   display: inline;
 }
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -86,11 +84,9 @@ ul {
   text-align: center;
   font-size: 4vh;
 }
-
 li {
   float: left;
 }
-
 li a, .dropbtn {
   display: inline-block;
   color: #AAA;
@@ -100,15 +96,12 @@ li a, .dropbtn {
   font-size: 6.5vh;
   color: #60A0DD;
 }
-
 li a:hover, .dropdown:hover .dropbtn {
   color: #60A0DD;
 }
-
 li.dropdown {
   display: inline;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -118,7 +111,6 @@ li.dropdown {
   z-index: 9999;
   font-size: 2vh;
 }
-
 .dropdown-content a {
   color: #000000;
   padding: 15% 10%;
@@ -127,17 +119,38 @@ li.dropdown {
   text-align: left;
   font-size: 2vh;
 }
-
 .dropdown-content a:hover {
   background-color: #f1f1f1;
   color: black;
 }
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
 	
 </style>
+	
+<script>
+function displayTranslatedImages() {
+    var myNode = document.getElementById("ASL");
+    while (myNode.lastChild) {
+        myNode.removeChild(myNode.lastChild);
+    }
+    var inputText = document.getElementById("textToTranslate").value;
+    var displayContainer = document.getElementById("ASL");
+    var specialRemoved = inputText.replace(/[^\w ]/gi, '');
+    var lowerCase = specialRemoved.toLowerCase();
+    var arrayTerms = lowerCase.split(" ");
+    for( let i = 0; i < arrayTerms.length; i++ ) {
+        let imageObject = document.createElement("img");
+        let imageSource = arrayTerms[i];
+        imageObject.src = imageSource + ".gif";
+        imageObject.alt = imageSource + ".gif";
+        displayContainer.appendChild(imageObject);
+    }
+    
+}
+    
+</script>
 
 </head>
 
@@ -165,32 +178,8 @@ li.dropdown {
 </div>
 
 <div class="translatebox2">
-<div id="ASL" />
+<div id="ASL"></div>
 </div>
+	
 </body>
-
-<script>
-
-function displayTranslatedImages() {
-    var myNode = document.getElementById("ASL");
-    while (myNode.lastChild) {
-        myNode.removeChild(myNode.lastChild);
-    }
-    var inputText = document.getElementById("textToTranslate").value;
-    var displayContainer = document.getElementById("ASL");
-    var specialRemoved = inputText.replace(/[^\w ]/gi, '');
-    var lowerCase = specialRemoved.toLowerCase();
-    var arrayTerms = lowerCase.split(" ");
-    for( let i = 0; i < arrayTerms.length; i++ ) {
-        let imageObject = document.createElement("img");
-        let imageSource = arrayTerms[i];
-        imageObject.src = imageSource + ".gif";
-        imageObject.alt = imageSource + ".gif";
-        displayContainer.appendChild(imageObject);
-    }
-    
-}
-    
-</script>
 </html>
-
