@@ -1,157 +1,79 @@
-<!DOCTYPE html><html lang=en>
-
-<head>
-
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
-body {
-  font-family: trebuchet ms;
+body, html {
+  height: 100%;
+  font-face: trebuchet ms;
   padding: 0px;
   margin: 0px;
-  margin-top: -2.5%;
+  overflow-x: hidden;
 }
 
-tableTop {
-  margin: 0px;
-  width: 100%;
-  height: auto;
-  padding-bottom: 0px;
-  background-color: #60A0DD;
-  margin-top: -1.5%;
-  display: block;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 5;
+.bigBoi {
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://images.pexels.com/photos/255527/pexels-photo-255527.jpeg?cs=srgb&dl=asking-blur-close-up-255527.jpg&fm=jpg");
+    min-height: 100%;
+    text-align: center;
 }
 
-tableTop p {
-  float: left;
-  color: #FFF;
-  font-size: 3vh;
-  margin-left: 10%;
+.bigboi h1 {
+    width: 100%;
+    height: 10%;
+    text-align: center;
 }
 
-tableTop code {
-  float: right;
-  color: #000;
-  font-size: 3vh;
-  margin-right: 1vw;
+ul.tableTop {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #60A0DD;
+    position: fixed;
+    top: 0;
+    width: 85%;
+    height: 6%;
+    color: #FFFFFA;
+    padding-left: 10%;
+    padding-right: 5%;
 }
 
-h4 {
-font-size: 2.5vh;
-width: 95%;
-margin-left: auto;
-margin-right: auto;
+li.left {
+    display: block;
+    float: left;
+    color: ##FFFFFA;
 }
 
-.center {
-text-align: center;
-margin-left: auto;
-margin-right: auto;
+li.right {
+    float: right;
+    color: #000000;
 }
 
-.left {
-text-align: left;
-width: 90%;
-margin-left: auto;
-margin-right: auto;
-}
-
-.right {
-text-align: right;
-margin-left: auto;
-margin-right: auto;
-}
-
-.further {
-width: 100%;
-bottom: -5vh;
-color: #FFFFFA;
-font-size: 7.5vh;
-margin-top: 100vh;
-margin-left: auto;
-margin-right: auto;
-text-shadow: 0px 0px 7.5px black;
-}
-
-.welcome {
-color: #FFFFFA;
-font-size: 7.5vw;
-position: absolute;
-  margin-top: 45vh;
-  margin-left: auto;
-   margin-right: auto;
-  box-shadow: 0px 0px 120px 40px;
-  z-index: 0;
-}
-
-div.backsplash {
-  background-position: center;
-  background-size: cover;
-  background-image: url("https://images.pexels.com/photos/255527/pexels-photo-255527.jpeg?cs=srgb&dl=asking-blur-close-up-255527.jpg&fm=jpg");
-  min-height: 105vh;
-  overflow-y: hidden;
-  z-index: -5;
-}
-
-a {
-text-decoration: none;
-color: black;
-border-bottom: .25vh solid #60A0DD;
+li u {
+    display: block;
+    text-align: center;
+    padding-top: 15%;
+    text-decoration: none;
 }
 
 </style>
+<body><font face="trebuchet ms">
 
-</head>
-
-<body onload="setContent()">
-
-<tableTop title="TranslateASL" id="Contribute"><p>TranslateASL</p></tableTop>
-
-<br>
-
-<div class="backsplash">
-
-<h1 class="center welcome">Welcome to Translate ASL</h1>
-
-<p class="center further">&#8891</p>
-
+<div class="tableTop">
+  <ul class="tableTop">
+    <li class="left"><u href="#">TranslateASL</u></li>
+    <li class="right"><u href="#">Contribute</u></li>
+  </ul>
 </div>
 
-<h4 class="center">Looking to contribute?</h4>
+<header class="bigBoi"><h1>Hello There, welcome to TranslateASL</h1></header>
 
-<p class="left">Want to join our team? You can contact our project leader (with a very brief resume) at <a href="mailto:OttC.TranslateASL@gmail.com?subject=Joining%20the%20Team&body=Hello, my name is (John Doe) and would like to contribute in the area of (your expertise), etc..."> OttC.TranslateASL@gmail.com</a>. You can also check in with <a href="https://github.com/OttCS20/TranslateASL">our Github page</a> if you happen to be the code-savvy type.
 
-<h4 class="center">Notice a missing sign?</h4>
-
-<p class="left">Just <a href="mailto:OttC.TranslateASL@gmail.com?subject=Sign%20Contribution&body=Missing word: (avocado?)"> send us an email</a> with "Sign Contribution" in the <strong>Subject</strong> field, with a video attachment of your translation! We appreciate your support in making the most efficient and accurate translation tool possible!
-
-</div>
-
+</font>
 </body>
-
-<!--
-
-<script>
-function setContent() {
-	var tag1 = document.getElementsByTagName("tableTop");
-	
-	for(var i = 0; i < tag1.length; i++ ) {
-		var title = document.createElement("p");
-		var textNo = document.createTextNode(" " + tag1[i].title);
-		title.appendChild(textNo);
-		tag1[i].appendChild(title);
-		var content = document.createElement("code");
-		var textNo2 = document.createTextNode(" " + tag1[i].id);
-		content.appendChild(textNo2);
-		tag1[i].appendChild(content);
-	}
-}
-</script>
-
--->
-
 </html>
 
